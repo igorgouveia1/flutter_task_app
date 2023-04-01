@@ -16,6 +16,26 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final List<Widget> _listItems = [];
 
+  void removeItem(int index) {
+    setState(() {
+      _listItems.removeAt(index);
+    });
+  }
+
+  void addItem() {
+    int newIndex = _listItems.length; // obter o índice da nova tarefa
+    setState(() {
+      _listItems.add(
+        Card(
+          child: Task(
+            index: newIndex, // passando o índice para a nova tarefa
+            onDelete: (index) => removeItem(index),
+          ),
+        ),
+      );
+    });
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -56,11 +76,7 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(() {
-              _listItems.add(
-                const Card(child: Task()),
-              );
-            });
+            addItem();
           },
           child: const Icon(
             Icons.add,
