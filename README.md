@@ -1,16 +1,11 @@
 # flutter_task_app
 
-A new Flutter project.
+Este código é um projeto de aplicativo de lista de tarefas simples em Flutter. 
 
-## Getting Started
+## Regras de negócio:
 
-This project is a starting point for a Flutter application.
+- O aplicativo permite que o usuário adicione novas tarefas por meio de um botão no canto inferior da tela;
+- Cada tarefa é exibida como um item de lista em um "Card";
+- Cada item de lista tem uma caixa de seleção que o usuário pode marcar ou desmarcar para indicar que a tarefa foi concluída; 
+- Cada item de lista também possui um menu que permite ao usuário editar ou excluir a tarefa.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
